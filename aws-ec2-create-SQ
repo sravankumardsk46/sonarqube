@@ -55,6 +55,11 @@ sudo su - sonarqube
 cd /opt/sonarqube/bin/linux-x86-64
 ./sonar.sh start
 #### sonarQube it is not going to work ROOT use #######
+us : useradd sonar
+visudo
+sonar   ALL=(ALL)       ALL   u can mention this user
+root    ALL=(ALL)       ALL
+
 
 
 
