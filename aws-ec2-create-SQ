@@ -62,6 +62,9 @@ root    ALL=(ALL)       ALL
 
 chown -R sonar:sonar /opt/sonarqube
 chown -R 775 /opt/sonarqube
+ls -l
+###to switch to sonar ########
+su -sonar
 
 
 
