@@ -54,6 +54,7 @@ sudo vi /opt/sonarqube/conf/sonar.properties
 sudo su - sonarqube
 cd /opt/sonarqube/bin/linux-x86-64
 ./sonar.sh start
+#### sonarQube it is not going to work ROOT use #######
 
 
 
