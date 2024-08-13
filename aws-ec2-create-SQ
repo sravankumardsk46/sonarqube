@@ -31,6 +31,38 @@ source /etc/environment
 
 echo $JAVA_HOME
 
+################now install sonarqube###########
+
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.8.zip
+
+##there is install unzip ###3
+sudo yum install unzip -y
+unzip -v
+
+unzip sonarqube-<version>.zip
+
+sudo mv sonarqube-7.8 /opt/sonarqube
+
+sudo useradd -r -s /bin/false sonarqube
+
+sudo chown -R sonarqube:sonarqube /opt/sonarqube
+
+###it file nessesery####
+sudo vi /opt/sonarqube/conf/sonar.properties
+
+##### To start sonarQube#####
+sudo su - sonarqube
+cd /opt/sonarqube/bin/linux-x86-64
+./sonar.sh start
+
+
+
+
+
+
+
+
+
 
 
 
