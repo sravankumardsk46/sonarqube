@@ -13,3 +13,13 @@ connect to ubutu terminall ofter connected
 us : uname
 us yum install wget -y
 
+####frist we need to install java before install java becouse dependice ######
+sudo yum update -y
+
+sudo yum install java-11-openjdk-devel -y
+
+java -version
+
+##############
+
+
