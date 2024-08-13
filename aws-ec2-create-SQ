@@ -60,6 +60,10 @@ visudo
 sonar   ALL=(ALL)       ALL   u can mention this user
 root    ALL=(ALL)       ALL
 
+chown -R sonar:sonar /opt/sonarqube
+chown -R 775 /opt/sonarqube
+
+
 
 
 
