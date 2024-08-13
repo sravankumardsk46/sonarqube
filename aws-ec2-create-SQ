@@ -64,7 +64,7 @@ chown -R sonar:sonar /opt/sonarqube
 chown -R 775 /opt/sonarqube
 ls -l
 ###to switch to sonar ########
-su -sonar
+su -sonar    #### Got cd /opt # then only ucan use this command imp ####
 
 
 
