@@ -20,6 +20,17 @@ sudo yum install java-11-openjdk-devel -y
 
 java -version
 
-##############
+############## configure java_home###########
+sudo update-alternatives --config java
+
+sudo vi /etc/environment
+
+JAVA_HOME="/usr/lib/jvm/java-11-openjdk-11.x.x.x.x86_64"
+
+source /etc/environment
+
+echo $JAVA_HOME
+
+
 
 
