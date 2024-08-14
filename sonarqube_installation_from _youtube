@@ -5,6 +5,7 @@ create one ec2 instance
 image amazon linux
 but we need t2.medium instence type
 ########lanch instence@@@@@@@@@@@@@
+uname
 sudo yum update -y
 
 sudo amazon-linux-extras install epel -y         ####its enble list put in to epel repository ###
