@@ -2,7 +2,7 @@
 ############ install in amazon  linux machin  ############
 we need java open jdk 11 version install frist in ec2 instences 
 create one ec2 instance 
-image amazon linux
+image amazon linux 2    ### its take linux 2 ami ###
 but we need t2.medium instence type
 ########lanch instence@@@@@@@@@@@@@
 uname
