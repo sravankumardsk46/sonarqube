@@ -40,7 +40,26 @@ cd conf
 cat sonar.properties|grep 9000     ####it is show you 9000 httpd connections open sequrity gp###
 {go to instance sequrity group add 9000 port and save}
 
-cat sonar.properties|grep database
+cat sonar.properties|grep database     ### you can get all detaile database##
+
+cd /bin
+ls -l
+pwd    /opt/sonarqube-7.6/bin
+./ sonar.sh start    #### it sis not working ROOT user ###
+
+./ sonar.sh start  status       not running
+cd ../..
+cd logs
+tail sonar.log     ###it show you root not work ###
+useradd sonar
+passwd sonar #### repeat posswor two times ##
+
+
+visudo
+wheel  all=all   all
+sonar  all=all   all
+wheel   all=all  nopasswd:all
+sonar   all=all  nopasswd:all
 
 
 
