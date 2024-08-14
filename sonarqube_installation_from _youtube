@@ -25,6 +25,9 @@ wget https://binaries.sonarsource.com / Distribution / sonarqube / sonarqube-7.6
 
 ls -l       REDSHOWS ZIP
 
+sudo yum install unzip -y      ####optional ##
+unzip -v                       ####optional ##
+
 unzip sonarqube-7.6.zip       
 
 
