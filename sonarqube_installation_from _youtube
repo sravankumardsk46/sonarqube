@@ -18,6 +18,8 @@ java -version
 
 @@@  https://binaries.sonarsource.com   ## to check this site## inther go to distribute go to sonarqube in there available zip file versions
 
+yum install wget -y        # it is optionol wget not work it install###
+
 wget https://binaries.sonarsource.com / Distribution / sonarqube / sonarqube-7.6.zip
 
 
