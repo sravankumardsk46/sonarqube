@@ -1,0 +1,26 @@
+1  ls -l /usr/sbin/useradd
+    2  chmod 755 /usr/sbin/useradd
+    3  ls -l /usr/sbin/useradd
+    4  useradd sonar
+    5  visudo
+    6  cd /opt/
+    7  chown sonar:sonar sonarqube
+    8  sudo su sonar
+    9  cd /opt
+   10  sudo rm -rf sonarqube
+   11  wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.6.zip
+   12  sudo unzip sonarqube-7.6.zip
+   13  sudo mv sonarqube-7.6 sonarqube
+   14  sudo chown -R sonarqube:sonarqube /opt/sonarqube
+   15  sudo chmod -R 755 /opt/sonarqube
+   16  java -version
+   17  cd /opt/sonarqube/bin/linux-x86-64
+   18  sudo -u sonarqube ./sonar.sh console
+   19  sudo yum install java-1.8.0-openjdk-devel
+   20  sudo alternatives --config java
+   21  java -version
+   22  cd /opt/sonarqube/bin/linux-x86-64
+   23  sudo -u sonarqube ./sonar.sh restart
+   24  ./sonar.sh status
+   25  sudo nano /opt/sonarqube/conf/sonar.properties
+   26  history
