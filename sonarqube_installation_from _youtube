@@ -62,6 +62,24 @@ wheel   all=all  nopasswd:all
 sonar   all=all  nopasswd:all
 
 
+cd /opt
+chown -R sonar:sonar sonarqube-7.6
+sudo su - sonar
+id    ### show the sonar user id##
+cd /opt
+ls -l
+cd sonarqube-7.6
+cd /bin
+ls -l
+cd linux-x86-64
+ls -l
+./ sonar.sh start     ###it show u running id##
+netstat -tulpn|grep 9000
+
+
+
+
+
 
 
 
