@@ -28,7 +28,24 @@ ls -l       REDSHOWS ZIP
 sudo yum install unzip -y      ####optional ##
 unzip -v                       ####optional ##
 
-unzip sonarqube-7.6.zip       
+unzip sonarqube-7.6.zip   
+
+ls -l    ## now remove red zip rm -rf sonarqube-7.6.zip#######
+cp -R sonarqube-7.6.zip /opt
+cd /opt
+ls -l
+cd sonarqube-7.6.zip
+ls -l
+cd conf
+cat sonar.properties|grep 9000     ####it is show you 9000 httpd connections open sequrity gp###
+{go to instance sequrity group add 9000 port and save}
+
+cat sonar.properties|grep database
+
+
+
+
+
 
 
 
