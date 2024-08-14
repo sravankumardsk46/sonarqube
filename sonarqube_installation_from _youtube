@@ -21,7 +21,8 @@ java -version
 
 yum install wget -y        # it is optionol wget not work it install###
 
-wget https://binaries.sonarsource.com / Distribution / sonarqube / sonarqube-7.6.zip
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.6.zip
+
 
 ls -l       REDSHOWS ZIP
 
