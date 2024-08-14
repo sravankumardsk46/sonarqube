@@ -76,6 +76,9 @@ ls -l
 ./ sonar.sh start     ###it show u running id##
 netstat -tulpn|grep 9000
 
+go to instence public ip copy past in google : 9000
+IT WORKS OPEN SONARQUBE DASHBOR
+
 
 
 
