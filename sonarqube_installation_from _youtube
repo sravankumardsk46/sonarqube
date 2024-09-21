@@ -32,7 +32,7 @@ unzip -v                       ####optional ##
 unzip sonarqube-7.6.zip   
 
 ls -l    ## now remove red zip rm -rf sonarqube-7.6.zip#######
-cp -R sonarqube-7.6.zip /opt
+cp -R sonarqube-7.6.zip /opt     #### has a minor issue. The -R (recursive) option is used for directories, but you're copying a single .zip file. Since the file doesn't require recursion, you can simply run:
 cd /opt
 ls -l
 cd sonarqube-7.6.zip
