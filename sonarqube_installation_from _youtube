@@ -1,16 +1,17 @@
+     its working command sonarqube dash bord 
 ###########  fist we need 2 GB RAM  4 GB Internel ##############
 ############ install in amazon  linux machin  ############
 we need java open jdk 11 version install frist in ec2 instences 
 create one ec2 instance 
-image amazon linux 2    ### its take linux 2 ami ###
-but we need t2.medium instence type
+image amazon linux 2    ### its take linux 2 ami ###  ok
+but we need t2.medium instence type   ok
 ########lanch instence@@@@@@@@@@@@@
 uname
 sudo yum update -y
 
 sudo amazon-linux-extras install epel -y         ####its enble list put in to epel repository ###
 
-yum repolist                                     ### it is repositery avileble or not check#########
+sudo yum repolist                                     ### it is repositery avileble or not check#########
 
 #########now install java ############
 sudo amazon-linux-extras install java-openjdk11 -y
@@ -19,7 +20,7 @@ java -version
 
 @@@  https://binaries.sonarsource.com   ## to check this site## inther go to distribute go to sonarqube in there available zip file versions
 
-yum install wget -y        # it is optionol wget not work it install###
+sudo yum install wget -y        # it is optionol wget not work it install###
 
 wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-7.6.zip
 
@@ -32,28 +33,35 @@ unzip -v                       ####optional ##
 unzip sonarqube-7.6.zip   
 
 ls -l    ## now remove red zip rm -rf sonarqube-7.6.zip#######
-cp -R sonarqube-7.6.zip /opt     #### has a minor issue. The -R (recursive) option is used for directories, but you're copying a single .zip file. Since the file doesn't require recursion, you can simply run:
+sudo cp -R sonarqube-7.6 /opt  #### has a minor issue. The -R (recursive) option is used for directories, but you're copying a single .zip file. Since the file doesn't require recursion, you can simply run:
+sudo ls -l /opt    ### veryfied copy
 cd /opt
 ls -l
-cd sonarqube-7.6.zip
+
+cd sonarqube-7.6
 ls -l
+
 cd conf
 cat sonar.properties|grep 9000     ####it is show you 9000 httpd connections open sequrity gp###
+
 {go to instance sequrity group add 9000 port and save}
 
 cat sonar.properties|grep database     ### you can get all detaile database##
 
-cd /bin
-ls -l
-pwd    /opt/sonarqube-7.6/bin
-./ sonar.sh start    #### it sis not working ROOT user ###
 
-./ sonar.sh start  status       not running
+cd /opt/sonarqube-7.6/bin/linux-x86-64
+
+
+ls -l
+pwd   /opt/sonarqube-7.6/bin/linux-x86-64
+./sonar.sh start    #### it sis not working ROOT user ###
+
+./sonar.sh start  status       not running
 cd ../..
 cd logs
 tail sonar.log     ###it show you root not work ###
 useradd sonar
-passwd sonar #### repeat posswor two times ##
+passwd sonar    #### repeat posswor two times ##
 
 
 visudo
@@ -61,6 +69,12 @@ wheel  all=all   all
 sonar  all=all   all
 wheel   all=all  nopasswd:all
 sonar   all=all  nopasswd:all
+
+%wheel  ALL=(ALL)       ALL
+sonar   ALL=(ALL)       ALL
+%wheel  ALL=(ALL)       NOPASSWD: ALL
+sonar   ALL=(ALL)       NOPASSWD: ALL
+
 
 
 cd /opt
@@ -78,7 +92,7 @@ ls -l
 netstat -tulpn|grep 9000
 
 go to instence public ip copy past in google : 9000
-IT WORKS OPEN SONARQUBE DASHBOR
+IT WORKS OPEN SONARQUBE DASHBOR   ####   ok it workd ###
 
 
 
